@@ -10,7 +10,7 @@ RUN set -x &&\
   rm sonarscanner.zip &&\
   rm sonar-scanner-$RELEASE-linux/jre -rf &&\
 #   ensure Sonar uses the provided Java for musl instead of a borked glibc one
-  sed -i 's/use_embedded_jre=true/use_embedded_jre=false/g' /root/sonar-scanner-$RELEASE-linux/bin/sonar-scanner
+  sed -i 's/use_embedded_jre=true/use_embedded_jre=false/g' ./sonar-scanner-$RELEASE-linux/bin/sonar-scanner
 
 ENV SONAR_RUNNER_HOME=/root/sonar-scanner-$RELEASE-linux
 ENV PATH $PATH:/root/sonar-scanner-$RELEASE-linux/bin
