@@ -14,5 +14,3 @@ RUN set -x &&\
 
 ENV SONAR_RUNNER_HOME=/root/sonar-scanner-$RELEASE-linux
 ENV PATH $PATH:/root/sonar-scanner-$RELEASE-linux/bin
-
-CMD /bin/bash
