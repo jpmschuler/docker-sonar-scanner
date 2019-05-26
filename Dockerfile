@@ -15,8 +15,4 @@ RUN set -x &&\
 ENV SONAR_RUNNER_HOME=/root/sonar-scanner-$RELEASE-linux
 ENV PATH $PATH:/root/sonar-scanner-$RELEASE-linux/bin
 
-COPY sonar-runner.properties ./sonar-scanner-$RELEASE-linux/conf/sonar-scanner.properties
-
-# Use bash if you want to run the environment from inside the shell, otherwise use the command that actually runs the underlying stuff
 CMD /bin/bash
-#CMD sonar-scanner -Dsonar.projectBaseDir=./src  
